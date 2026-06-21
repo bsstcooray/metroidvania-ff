@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://c8kk3m5n4rbds"]
+
+[ext_resource type="Script" path="res://scenes/levels/level.gd"]
+[ext_resource type="PackedScene" uid="uid://dbx2yyj25iab1" path="res://scenes/player/player.tscn"]
+[ext_resource type="PackedScene" uid="uid://d0ab4mhya9q9t" path="res://scenes/world/tilemap.tscn"]
+[ext_resource type="PackedScene" uid="uid://b3kwl7o4k8bj6" path="res://scenes/ui/ui.tscn"]
+
+[node name="Level01" type="Node2D"]
+script = ExtResource("1")
+
+[node name="TileMap" parent="." instance=ExtResource("3")]
+
+[node name="Player" parent="." instance=ExtResource("2")]
+position = Vector2(160, 300)
+
+[node name="Enemies" type="Node2D" parent="."]
+
+[node name="UI" parent="." instance=ExtResource("4")]
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+zoom = Vector2(2, 2)
